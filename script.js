@@ -3,7 +3,7 @@ const chatBtn = document.querySelector('.chat-btn');
 const submitBtn = document.querySelector('.submit');
 const chatArea = document.querySelector('.chat-area');
 const inputElm = document.querySelector('input');
-
+const badge = document.querySelector('.badge');
 const emojiBtn = document.querySelector('#emoji-btn');
 
 const picker = new EmojiButton();
@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 chatBtn.addEventListener('click',()=>{
     popup.classList.toggle('show');
+    badge.classList.toggle('btn-toggle');
 });
 
 // Chat Button Toggler Ends 

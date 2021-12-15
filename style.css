@@ -47,7 +47,13 @@ p{
     box-shadow: 0px 5px 5px rgba(  0, 0, 0, 0.4);
 }
 
-.chat-btn:hover,.submit:hover, #emoji-btn:hover{
+button.chat-btn::after :hover{
+    opacity: 1;
+}
+
+
+
+.chat-btn:hover,.submit:hover, #emoji-btn:hover,.badge:hover,.btn-toggle:hover{
     opacity: 1;
 }
 
@@ -66,7 +72,18 @@ p{
     box-shadow: 5px 5px 5px rgba(  0, 0, 0, 0.4);
     border-radius: 10px;
 }
-
+.chat-head{
+    border-radius: 10px 10px 0px 0px ;
+    background-color: rgb(93, 93, 214);
+    height: 8vh;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: -12px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
 .chat-area{
     height: 80%;
     overflow-y: auto;
@@ -83,12 +100,13 @@ p{
     color: white;
     padding: 0.5rem;
     border-radius: 25px;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     box-shadow: 0 2px 5px rgba(  0, 0, 0, 0.4);
 }
 
 .badge{
     position: absolute;
+    font-size: 1rem;
     width: 30px;
     height: 30px;
     background-color: red;
@@ -99,6 +117,7 @@ p{
     align-items: center;
     top: -10px;
     right: -10px;
+    opacity:0.5;
 }
 
 .input-area{
@@ -120,6 +139,7 @@ input[type="text"]{
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
+    font-size:2rem;
 }
 
 #emoji-btn{
@@ -161,6 +181,10 @@ input[type="text"]{
 .show{
     display: flex;
 }
+.btn-toggle{
+   display: none;
+}
+
 
 @media (max-width: 500px){
     .chat-popup{
