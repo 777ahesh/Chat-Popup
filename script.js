@@ -35,11 +35,17 @@ chatBtn.addEventListener('click',()=>{
 
 submitBtn.addEventListener('click',()=>{
     let userInput = inputElm.value;
+    var today = new Date();
+
+    var time = today.toLocaleTimeString({ hour: 'numeric', minute: 'numeric', hour12: true });
+    var dateTime = time;
     // console.log(userInput);
-    let temp = `<div class ="out-msg">
-        <span class="my-msg">${userInput}</span>
+    let temp = `
+    <div class ="out-msg">
+        <span class="my-msg" >${userInput}</span>
         <i class="material-icons">account_circle</i>
-        </div>`;
+        </div>
+        <span class="date-time">${dateTime}</span>`;
 
     chatArea.insertAdjacentHTML("beforeend",temp);
     inputElm.value = '';
