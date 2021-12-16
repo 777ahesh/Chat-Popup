@@ -175,7 +175,7 @@ input[type="text"]{
 .submit{
     padding: 0.25rem .5rem;
     margin-left: 0.5rem;
-    background-color: green;
+    background-color: blue;
     color: white;
     display: flex;
     justify-content: center;
